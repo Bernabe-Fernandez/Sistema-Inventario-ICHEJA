@@ -1,3 +1,7 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
 <?php
 //mandamos a llamar el archivo de conexion
 include('conex.php');
@@ -12,6 +16,7 @@ $username = mysqli_real_escape_string($conec, $_POST['usuario']);
 
 //query para consultar en la bd los datos que coincidan con la informacion enviada en el formulario
 $querySelect = "SELECT * FROM usuarioadmin where NombreUsuario = '$username' and Contrasena = '$password';";
+echo $querySelect;
 //ejecutar consulta en la base de datos
 $consulta = mysqli_query($conec, $querySelect);
 
@@ -30,12 +35,14 @@ if ($consulta->num_rows) {
             //header('Location: login.php');
             echo "<script>location.href='../index.php';</script>";
         } else {
-            echo "Nombre de Usuario / Contraseña Incorrecto";
+            //con este codigo regresamos a la pagina principal y evaluamos si el logueo fue incorrecto
+            echo '<script>window.location.href = "../login.php?session=true";</script>';
         }
     } else {
-        echo "Nombre de Usuario / Contraseña Incorrecto";
+        //con este codigo regresamos a la pagina principal y evaluamos si el logueo fue incorrecto
+        echo '<script>window.location.href = "../login.php?session=true";</script>';
     }
 } else {
-    echo "Nombre de Usuario / Contraseña Incorrecto";
+    //con este codigo regresamos a la pagina principal y evaluamos si el logueo fue incorrecto
+    echo '<script>window.location.href = "../login.php?session=true";</script>';
 }
-

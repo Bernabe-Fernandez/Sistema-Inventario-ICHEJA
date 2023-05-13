@@ -1,4 +1,14 @@
-
+<?php
+//evaluamos que se manden datos desde el get
+if ($_GET) {
+  //asiganamos la variable sesion que es lo que mandamos por get
+  $sesion = $_GET['session'];
+  //si sesion es tru nos indica que el logueo no se logro, se debe mostrar la alarta
+  if ($sesion) {
+    /*aqui debe ir el codigo para la alerta*/
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
