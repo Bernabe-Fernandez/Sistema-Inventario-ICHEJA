@@ -16,7 +16,6 @@ $username = mysqli_real_escape_string($conec, $_POST['usuario']);
 
 //query para consultar en la bd los datos que coincidan con la informacion enviada en el formulario
 $querySelect = "SELECT * FROM usuarioadmin where NombreUsuario = '$username' and Contrasena = '$password';";
-echo $querySelect;
 //ejecutar consulta en la base de datos
 $consulta = mysqli_query($conec, $querySelect);
 

@@ -89,7 +89,7 @@
                           <h5>filtradores:</h5><br>
                           <div class="col-md-1 " style=" text-align: justify;">
                             <div class="form-check ">
-                              <input class="form-check-input" type="checkbox" value="" id="checkbox1" style="">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox1">
                               <label class="form-check-label" for="checkbox1">N/C
                               </label>
                             </div>
