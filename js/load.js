@@ -45,9 +45,18 @@ function getData(pagina) {
     .catch((err) => console.log("Este es el error" + err));
 }
 
+
+
+
+function descargarExcel(){
+  let input = document.getElementById("campo").value;
+  let url = "descarga/excel.php?filtro=" + encodeURIComponent(input);
+  document.getElementById("btn-excel").href = url;
+}
+
 //funcion que nos sirve para generar alerta de confimracion de eliminación
 function ConfirmarDelete(id) {
-    id=id;
+  id = id;
   Swal.fire({
     title: "¿Estás seguro que deseas eliminar este registro?",
     showCancelButton: true,
@@ -60,7 +69,7 @@ function ConfirmarDelete(id) {
       // Si el usuario confirma, realiza la acción de cancelar
       window.location.href = "crud/eliminar.php?id=" + id;
     } else {
-        window.location.href = "Inventario.php";
+      window.location.href = "Inventario.php";
     }
   });
 }
