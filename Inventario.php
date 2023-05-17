@@ -9,6 +9,9 @@ if (!isset($usuario)) {
   header("location: login.php");
 } else {
 }
+$resultado = true;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -111,9 +114,6 @@ if (!isset($usuario)) {
             <div class="col-auto">
               <!-- <label for="num_registros" class="form-select">registros </label> -->
             </div>
-            <div>
-
-            </div>
 
             <div class="row" style="margin-left: 4%;">
               <h5>filtradores:</h5><br>
@@ -203,8 +203,6 @@ if (!isset($usuario)) {
               <!-- fin del boton spam -->
             </div>
           </form>
-
-
           <div class="row g-4">
             <div>
               <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
@@ -253,20 +251,30 @@ if (!isset($usuario)) {
           </div>
           <div class="col-6" id="nav-paginacion"></div>
           <div>
-            <a href="AgregarInventario.php"><button class="btn-add btn-lg">
-                <i class="fas fa-plus-circle "></i> Agregar
-              </button></a>
+            <a href="AgregarInventario.php">
+              <button class="btn-add btn-lg">
+                <i class="fas fa-plus-circle "></i>
+                Agregar
+              </button>
+            </a>
+            <a href="descarga/excel.php" onclick="descargarExcel();" id="btn-excel">
+              <button class="btn-add btn-lg">
+                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                Excel
+              </button>
+            </a>
           </div>
         </div>
-    </div>
-    </main>
+      </main>
 
-    <script src="js/load.js">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/646c794df3.js"></script>
+      <script src="js/load.js">
+      </script>
+      <script>
+      </script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/646c794df3.js"></script>
 </body>
 
 </html>
