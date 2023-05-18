@@ -105,7 +105,7 @@ if($num_rows > 0){
         $output['data'].= '<td>'.$row['SERAPE'].'</td>';
         $output['data'].= '<td><a href="ActualizarInventario.php?id=' . $row['NumInvenCompleto'] . '"><i class="bi bi-pencil-square"></i></a></td>';
         $output['data'].= '<td><a href="MoverInventario.php?id=' . $row['NumInvenCompleto'] . '"><i class="bi bi-arrows-move"></i></a></td>';
-        $output['data'].= '<td><a href="#" onclick="ConfirmarDelete('. $row['No'] .')"><i class="bi bi-trash"></i></a></td>';
+        $output['data'].= '<td><a class="borrar" href="#" onclick="ConfirmarDelete('. $row['No'] .')"><i class="bi bi-trash"></i></a></td>';
         $output['data'].= '</tr>';
     }
 }else{
