@@ -45,7 +45,7 @@ function getData(pagina) {
     .catch((err) => console.log("Este es el error" + err));
 }
 
-function descargarExcel() {
+function descargarExcel(num) {
   let input = document.getElementById("campo").value;
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
   let columnas = []; // Variable para almacenar los valores seleccionados
@@ -55,7 +55,6 @@ function descargarExcel() {
     selectedValues.push(checkedCheckboxes[j].value);
   }
     columnas = selectedValues; // Actualiza la variable columnas con los valores seleccionados
-  let url = "descarga/excelEtiqueta.php?filtro=" + encodeURIComponent(input);
+  let url = "descarga/excelEtiqueta.php?opcion=" + num + "&filtro=" + encodeURIComponent(input);
   document.getElementById("btn-excelEtiqueta").href = url;
 }
-document.getElementById("btn-excelEtiqueta").addEventListener("click", descargarExcel);
