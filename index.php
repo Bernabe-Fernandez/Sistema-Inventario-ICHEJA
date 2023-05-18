@@ -70,7 +70,7 @@ $resultado = true;
                                 <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z" />
                             </svg></i><span>Vales</span></a>
 
-                    <a href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                    <a href="ConsultaEtiqueta.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
                                 <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
                             </svg></i><span>Etiquetas</span></a>
 
@@ -270,71 +270,68 @@ $resultado = true;
                                 </div>
                             </div>
                         </div>
-                </div>
-                </form>
-                <div class="row g-4">
+                    </form>
+                    <div class="row g-4">
+                        <div>
+                            <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
+                        </div>
+                    </div>
+                    <div class="div_principa">
+                        <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
+                            <thead>
+                                <th scope="col" id="ColumnNo">No</th>
+                                <th scope="col" id="ColumnCOG">COG</th>
+                                <th scope="col" id="ColumnNumInvenCompleto">Numero Inventario</th>
+                                <th scope="col" id="ColumnTramiteBajas2023">Tramite Bajas</th>
+                                <th scope="col" id="ColumnEstatus">Estatus</th>
+                                <th scope="col" id="ColumnNombreBien">Nombre Bien</th>
+                                <th scope="col" id="ColumnDescripcion">Descripcion</th>
+                                <th scope="col" id="ColumnEstado">Estado</th>
+                                <th scope="col" id="ColumnMunicipio">Municipio</th>
+                                <th scope="col" id="ColumnInmueble">Inmueble</th>
+                                <th scope="col" id="ColumnCoordinacionZona">Coordinacion de Zona a la que Pertenece</th>
+                                <th scope="col" id="ColumnNombreLugar">Nombre del Lugar</th>
+                                <th scope="col" id="ColumnClaveUbicacion">Clave de Ubicación</th>
+                                <th scope="col" id="ColumnNombreUsuario">Nombre Usuario</th>
+                                <th scope="col" id="ColumnNumUsuario">Clave Usuario</th>
+                                <th scope="col" id="ColumnCosto">Costo</th>
+                                <th scope="col" id="ColumnFechaAdquisicion">Fecha de Adquisición</th>
+                                <th scope="col" id="ColumnFormaAdquisicion">Forma Adquisición</th>
+                                <th scope="col" id="ColumnProveedor">Proveedor</th>
+                                <th scope="col" id="ColumnFactura">Factura</th>
+                                <th scope="col" id="ColumnCondiciones">Condiciones</th>
+                                <th scope="col" id="ColumnObservacion">Observacion</th>
+                                <th scope="col" id="ColumnObservacionGral">ObservacionGral</th>
+                                <th scope="col" id="ColumnNumeroInventarioConsumo">NumeroInventarioConsumo</th>
+                                <th scope="col" id="ColumnSERAPE">SERAPE</th>
+                            </thead>
+                            <tbody id="content">
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label id="lbl-total"></label>
+                        </div>
+                    </div>
+                    <div class="col-6" id="nav-paginacion"></div>
                     <div>
-                        <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
-                    </div>
+                        <a href="AgregarInventario.php"><button class="btn-add btn-lg">
+                                <i class="fas fa-plus-circle "></i> Agregar
+                            </button></a>
+                        <a href="#" onclick="descargarExcel(1);" id="btn-excelEtiqueta">
+                            <button class="btn-add btn-lg">
+                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                Excel
+                            </button>
+                        </a>
+                    </div>  
                 </div>
-                <div class="div_principa">
-                    <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
-                        <thead>
-                            <th scope="col" id="ColumnNo">No</th>
-                            <th scope="col" id="ColumnCOG">COG</th>
-                            <th scope="col" id="ColumnNumInvenCompleto">Numero Inventario</th>
-                            <th scope="col" id="ColumnTramiteBajas2023">Tramite Bajas</th>
-                            <th scope="col" id="ColumnEstatus">Estatus</th>
-                            <th scope="col" id="ColumnNombreBien">Nombre Bien</th>
-                            <th scope="col" id="ColumnDescripcion">Descripcion</th>
-                            <th scope="col" id="ColumnEstado">Estado</th>
-                            <th scope="col" id="ColumnMunicipio">Municipio</th>
-                            <th scope="col" id="ColumnInmueble">Inmueble</th>
-                            <th scope="col" id="ColumnCoordinacionZona">Coordinacion de Zona a la que Pertenece</th>
-                            <th scope="col" id="ColumnNombreLugar">Nombre del Lugar</th>
-                            <th scope="col" id="ColumnClaveUbicacion">Clave de Ubicación</th>
-                            <th scope="col" id="ColumnNombreUsuario">Nombre Usuario</th>
-                            <th scope="col" id="ColumnNumUsuario">Clave Usuario</th>
-                            <th scope="col" id="ColumnCosto">Costo</th>
-                            <th scope="col" id="ColumnFechaAdquisicion">Fecha de Adquisición</th>
-                            <th scope="col" id="ColumnFormaAdquisicion">Forma Adquisición</th>
-                            <th scope="col" id="ColumnProveedor">Proveedor</th>
-                            <th scope="col" id="ColumnFactura">Factura</th>
-                            <th scope="col" id="ColumnCondiciones">Condiciones</th>
-                            <th scope="col" id="ColumnObservacion">Observacion</th>
-                            <th scope="col" id="ColumnObservacionGral">ObservacionGral</th>
-                            <th scope="col" id="ColumnNumeroInventarioConsumo">NumeroInventarioConsumo</th>
-                            <th scope="col" id="ColumnSERAPE">SERAPE</th>
-                        </thead>
-                        <tbody id="content">
-
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <label id="lbl-total"></label>
-                    </div>
-                </div>
-                <div class="col-6" id="nav-paginacion"></div>
-                <div>
-                    <a href="AgregarInventario.php">
-                        <button class="btn-add btn-lg">
-                            <i class="fas fa-plus-circle "></i>
-                            Agregar
-                        </button>
-                    </a>
-                    <a href="#" onclick="descargarExcel();" id="btn-excel">
-                        <button class="btn-add btn-lg">
-                            <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                            Excel
-                        </button>
-                    </a>
-                </div>
+            </main>
         </div>
-        </main>
 
         <script src="js/load.js">
         </script>
