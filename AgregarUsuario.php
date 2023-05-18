@@ -144,7 +144,7 @@
         if (result.isConfirmed) {
           // Si el usuario confirma, envía los datos al archivo correspondiente
           const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
-          fetch('Crud/operauser.php', {
+          fetch('crud/operauser.php', {
             method: 'POST',
             body: formData
           }).then(response => {
@@ -159,7 +159,7 @@
                 timer: 3000
               });
               setTimeout(function() {
-                window.location.href = 'agregarUsuario.php'; //modificar para que al momento de guardar me direcciones a usuarios
+                window.location.href = 'usuarios.php'; //modificar para que al momento de guardar me direcciones a usuarios
               }, 1000);
             } else {
               // Si el servidor devuelve un error, muestra el mensaje de error

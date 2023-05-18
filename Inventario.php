@@ -270,106 +270,107 @@ $resultado = true;
                 </div>
               </div>
             </div>
-        </div>
-        </form>
-        <div class="row g-4">
+
+          </form>
+          <div class="row g-4">
+            <div>
+              <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
+            </div>
+          </div>
+          <div class="div_principa">
+            <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
+              <thead>
+                <th scope="col" id="ColumnNo">No</th>
+                <th scope="col" id="ColumnCOG">COG</th>
+                <th scope="col" id="ColumnNumInvenCompleto">Numero Inventario</th>
+                <th scope="col" id="ColumnTramiteBajas2023">Tramite Bajas</th>
+                <th scope="col" id="ColumnEstatus">Estatus</th>
+                <th scope="col" id="ColumnNombreBien">Nombre Bien</th>
+                <th scope="col" id="ColumnDescripcion">Descripcion</th>
+                <th scope="col" id="ColumnEstado">Estado</th>
+                <th scope="col" id="ColumnMunicipio">Municipio</th>
+                <th scope="col" id="ColumnInmueble">Inmueble</th>
+                <th scope="col" id="ColumnCoordinacionZona">Coordinacion de Zona a la que Pertenece</th>
+                <th scope="col" id="ColumnNombreLugar">Nombre del Lugar</th>
+                <th scope="col" id="ColumnClaveUbicacion">Clave de Ubicación</th>
+                <th scope="col" id="ColumnNombreUsuario">Nombre Usuario</th>
+                <th scope="col" id="ColumnNumUsuario">Clave Usuario</th>
+                <th scope="col" id="ColumnCosto">Costo</th>
+                <th scope="col" id="ColumnFechaAdquisicion">Fecha de Adquisición</th>
+                <th scope="col" id="ColumnFormaAdquisicion">Forma Adquisición</th>
+                <th scope="col" id="ColumnProveedor">Proveedor</th>
+                <th scope="col" id="ColumnFactura">Factura</th>
+                <th scope="col" id="ColumnCondiciones">Condiciones</th>
+                <th scope="col" id="ColumnObservacion">Observacion</th>
+                <th scope="col" id="ColumnObservacionGral">ObservacionGral</th>
+                <th scope="col" id="ColumnNumeroInventarioConsumo">NumeroInventarioConsumo</th>
+                <th scope="col" id="ColumnSERAPE">SERAPE</th>
+              </thead>
+              <tbody id="content">
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <label id="lbl-total"></label>
+            </div>
+          </div>
+          <div class="col-6" id="nav-paginacion"></div>
           <div>
-            <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
+            <a href="AgregarInventario.php">
+              <button class="btn-add btn-lg">
+                <i class="fas fa-plus-circle "></i>
+                Agregar
+              </button>
+            </a>
+            <a href="#" onclick="descargarExcel();" id="btn-excel">
+              <button class="btn-add btn-lg">
+                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                Excel
+              </button>
+            </a>
           </div>
-        </div>
-        <div class="div_principa">
-          <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
-            <thead>
-              <th scope="col" id="ColumnNo">No</th>
-              <th scope="col" id="ColumnCOG">COG</th>
-              <th scope="col" id="ColumnNumInvenCompleto">Numero Inventario</th>
-              <th scope="col" id="ColumnTramiteBajas2023">Tramite Bajas</th>
-              <th scope="col" id="ColumnEstatus">Estatus</th>
-              <th scope="col" id="ColumnNombreBien">Nombre Bien</th>
-              <th scope="col" id="ColumnDescripcion">Descripcion</th>
-              <th scope="col" id="ColumnEstado">Estado</th>
-              <th scope="col" id="ColumnMunicipio">Municipio</th>
-              <th scope="col" id="ColumnInmueble">Inmueble</th>
-              <th scope="col" id="ColumnCoordinacionZona">Coordinacion de Zona a la que Pertenece</th>
-              <th scope="col" id="ColumnNombreLugar">Nombre del Lugar</th>
-              <th scope="col" id="ColumnClaveUbicacion">Clave de Ubicación</th>
-              <th scope="col" id="ColumnNombreUsuario">Nombre Usuario</th>
-              <th scope="col" id="ColumnNumUsuario">Clave Usuario</th>
-              <th scope="col" id="ColumnCosto">Costo</th>
-              <th scope="col" id="ColumnFechaAdquisicion">Fecha de Adquisición</th>
-              <th scope="col" id="ColumnFormaAdquisicion">Forma Adquisición</th>
-              <th scope="col" id="ColumnProveedor">Proveedor</th>
-              <th scope="col" id="ColumnFactura">Factura</th>
-              <th scope="col" id="ColumnCondiciones">Condiciones</th>
-              <th scope="col" id="ColumnObservacion">Observacion</th>
-              <th scope="col" id="ColumnObservacionGral">ObservacionGral</th>
-              <th scope="col" id="ColumnNumeroInventarioConsumo">NumeroInventarioConsumo</th>
-              <th scope="col" id="ColumnSERAPE">SERAPE</th>
-            </thead>
-            <tbody id="content">
-
-            </tbody>
-          </table>
-
-        </div>
-
-        <div class="row">
-          <div class="col-6">
-            <label id="lbl-total"></label>
-          </div>
-        </div>
-        <div class="col-6" id="nav-paginacion"></div>
-        <div>
-          <a href="AgregarInventario.php">
-            <button class="btn-add btn-lg">
-              <i class="fas fa-plus-circle "></i>
-              Agregar
-            </button>
-          </a>
-          <a href="#" onclick="descargarExcel();" id="btn-excel">
-            <button class="btn-add btn-lg">
-              <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-              Excel
-            </button>
-          </a>
-        </div>
+      </main>
     </div>
-    </main>
+  </div>
 
-    <script src="js/load.js">
-    </script>
-    <script>
-      window.addEventListener('DOMContentLoaded', function() {
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        var table = document.getElementById('results');
+  <script src="js/load.js">
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      var table = document.getElementById('results');
 
-        checkboxes.forEach(function(checkbox) {
-          checkbox.addEventListener('change', function() {
-            var colId = this.value;
-            var column = document.getElementById('Column' + colId);
-            var colIndex = column.cellIndex;
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          var colId = this.value;
+          var column = document.getElementById('Column' + colId);
+          var colIndex = column.cellIndex;
 
-            var rows = table.getElementsByTagName('tr');
-            for (var i = 0; i < rows.length; i++) {
-              var cells = rows[i].getElementsByTagName('td');
-              if (cells.length > colIndex) {
-                cells[colIndex].style.display = this.checked ? 'none' : '';
-              }
+          var rows = table.getElementsByTagName('tr');
+          for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].getElementsByTagName('td');
+            if (cells.length > colIndex) {
+              cells[colIndex].style.display = this.checked ? 'none' : '';
             }
+          }
 
-            // Mostrar u ocultar el título de la columna
-            var headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
-            var headerCell = headerRow.getElementsByTagName('th')[colIndex];
-            headerCell.style.display = this.checked ? 'none' : '';
-          });
+          // Mostrar u ocultar el título de la columna
+          var headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
+          var headerCell = headerRow.getElementsByTagName('th')[colIndex];
+          headerCell.style.display = this.checked ? 'none' : '';
         });
       });
-    </script>
+    });
+  </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/646c794df3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/646c794df3.js"></script>
 </body>
 
 </html>

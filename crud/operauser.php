@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // preparar la consulta SQL
     $sql = "INSERT INTO usuarios (No_User, Nombre, Telefono) VALUES (?, ?, ?)";
-    $stmt = $conec->prepare($sql);
+    $stmt = $conn->prepare($sql);
     
     $stmt->bind_param('sss', $nousu, $nomusuario, $NumTel);
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // cerrar la conexión a la base de datos
     $stmt->close();
-    $conec->close();
+    $conn->close();
     //header('Location: AgregarUsuario.php');
 
     // enviar la respuesta como JSON

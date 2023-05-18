@@ -21,9 +21,9 @@ header("Content-Disposition: attachment; filename= productos.xls");
                         </thead>
                         <tbody id="content">
                         <?php
-                         include("../Conexion/Conexion.php");
-
-                         $conn = conectar_bd();
+                          include("../conection/conex.php");
+                         //conexion de base de datos
+                          $conn = conectar();                         
                         // Consultar la tabla "usuarios"
                         $sql = "SELECT c.N_C, c.Clave1, c.Clave2, c.Ubicacion, c.Inmueble, c.Nombre_Coord, u.Nombre, c.Direccion, c.Localizacion
                         FROM coordinaciones c

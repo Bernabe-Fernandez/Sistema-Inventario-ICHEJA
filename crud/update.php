@@ -40,11 +40,10 @@ $Serape = $_POST['Serape'];
 
 
 
-$insertarInven = "UPDATE inventariogeneral set " . " No = '$No', COG = '$COG', NumInvenCompleto = '$NumInvenCompleto', TramiteBajas2023 = '$TramiteBajas2023', NumeroInve = '1', IdentificadorInven = '1', Estatus = '$Estatus', NombreBien = '$NombreBien', Descripcion = '$descripcion', Estado = '$Estado', Municipio = '$Municipio', Inmueble = '$Inmuble', CoordinacionZona = '$CoordinacionZona', NombreLugar = '$NombreLugar', ClaveUbicacion = '$ClaveUbicacion', NombreUsuario = '$NombreUsuario', NumUsuario = '$NumUsuario', Costo = '$Costo', FechaAdquisicion = '$FechaAdqui', FormaAdquisicion = '$FormaAdqui', Proveedor = '$Proveedor', Factura = '$Factura', Condiciones = '$Condiciones', Observacion = '$Observacion', ObservacionGral = '$ObservacionGral', NumeroInventarioConsumo = '$NumInventarioConsumo', SERAPE = '$Serape' WHERE NumInvenCompleto = '$id'"; 
+$insertarInven = "UPDATE inventariogeneral set " . " No = '$No', COG = '$COG', NumInvenCompleto = '$NumInvenCompleto', TramiteBajas2023 = '$TramiteBajas2023', Estatus = '$Estatus', NombreBien = '$NombreBien', Descripcion = '$descripcion', Estado = '$Estado', Municipio = '$Municipio', Inmueble = '$Inmuble', CoordinacionZona = '$CoordinacionZona', NombreLugar = '$NombreLugar', ClaveUbicacion = '$ClaveUbicacion', NombreUsuario = '$NombreUsuario', NumUsuario = '$NumUsuario', Costo = '$Costo', FechaAdquisicion = '$FechaAdqui', FormaAdquisicion = '$FormaAdqui', Proveedor = '$Proveedor', Factura = '$Factura', Condiciones = '$Condiciones', Observacion = '$Observacion', ObservacionGral = '$ObservacionGral', NumeroInventarioConsumo = '$NumInventarioConsumo', SERAPE = '$Serape' WHERE NumInvenCompleto = '$id'"; 
 
 $queryInsert = mysqli_query($conec, $insertarInven);
 
 if ($queryInsert) {
-    echo '<script>alert("guardado correctamente");
-    location.href = "../index.php";</script> ';
+    echo '<script>location.href = "../index.php";</script> ';
 }

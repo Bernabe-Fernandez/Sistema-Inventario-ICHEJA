@@ -1,3 +1,15 @@
+<?php
+//llamamos la sesion
+session_start();
+//pasamos el usuario de la sesion
+$usuario = $_SESSION['usuario'];
+
+//evaluar si existe una session iniciada de lo contrario redirigir a login
+if (!isset($usuario)) {
+    header("location: login.php");
+} else {
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -27,9 +27,10 @@ header("Content-Disposition: attachment; filename= Plazas.xls");
                         </thead>
                         <tbody id="content">
                         <?php
-                         include("../Conexion/Conexion.php");
-
-                         $conn = conectar_bd();
+                        include("../conection/conex.php");
+                        //conexion de base de datos
+                        $conn = conectar();
+                        
                         // Consultar la tabla "usuarios"
                         $sql = "SELECT c.N_C, c.CoordZona, c.NumPlaza, c.NombrePlaza, c.Ubicacion, c.Ubicacion2, c.Estatus, c.NumUbicacion, c.Localidad, c.Municipio, c.Observaciones, c.CodigoPostal, u.Nombre, u.No_User, u.Telefono
                         FROM plazascomunitarias c

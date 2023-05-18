@@ -88,12 +88,12 @@
         </div>
 
         <?php
-        include("../conection/conex.php");
+        include("conection/conex.php");
         //conexion de base de datos
         $conn = conectar();
         // Obtener datos de la tabla de usuarios
         $sql = "SELECT IdUsuario, Nombre FROM usuarios";
-        $resultado = $conexion->query($sql);
+        $resultado = $conn->query($sql);
 
         // Crear opciones para el select
         $options = '';
@@ -102,7 +102,7 @@
         }
 
         // Cerrar conexión a la base de datos
-        $conexion->close();
+        $conn->close();
         ?>
         <form class="form" id="FormAdd" method="POST" action="Crud/InsertarDeptos.php">
           <div class="container">
@@ -184,7 +184,7 @@
                     if (result.isConfirmed) {
                       // Si el usuario confirma, envía los datos al archivo correspondiente
                       const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
-                      fetch('Crud/InsertarDeptos.php', {
+                      fetch('crud/InsertarDeptos.php', {
                         method: 'POST',
                         body: formData
                       }).then(response => {

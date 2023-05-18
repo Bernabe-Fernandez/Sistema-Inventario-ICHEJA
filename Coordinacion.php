@@ -1,3 +1,16 @@
+<?php
+//llamamos la sesion
+session_start();
+//pasamos el usuario de la sesion
+$usuario = $_SESSION['usuario'];
+
+//evaluar si existe una session iniciada de lo contrario redirigir a login
+if (!isset($usuario)) {
+    header("location: login.php");
+} else {
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +39,7 @@
       <div class="col-4 text-right barra">
         <ul class="navbar-nav mr-auto">
           <li>
-            <a href="#" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"></i></a>
+            <a href="#" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"><?php echo "<h5>BIENVENIDO $usuario </h5>"; ?></i></a>
 
             <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
               <a class="dropdown-item menuperfil cerrar" href="login.php"><i class="fas fa-sign-out-alt m-1"></i>Salir
@@ -284,7 +297,7 @@
                   paginaActual = pagina
                 }
 
-                let url = "Crud/loadcoor.php"; // cambio para que funcione en carpetas
+                let url = "crud/loadcoor.php"; // cambio para que funcione en carpetas
                 //enviar parametros mediante un formdata
                 let formaData = new FormData();
 

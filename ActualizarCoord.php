@@ -1,3 +1,18 @@
+<?php
+//llamamos la sesion
+session_start();
+//pasamos el usuario de la sesion
+$usuario = $_SESSION['usuario'];
+
+//evaluar si existe una session iniciada de lo contrario redirigir a login
+if (!isset($usuario)) {
+    header("location: login.php");
+} else {
+}
+$resultado = true;
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -220,7 +235,7 @@
                                     timer: 3000
                                 });
                                 setTimeout(function() {
-                                    window.location.href = 'Coordinaciones.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
+                                    window.location.href = 'Coordinacion.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
                                 }, 1000);
                             } else {
                                 Swal.fire({

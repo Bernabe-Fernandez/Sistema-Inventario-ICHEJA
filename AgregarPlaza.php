@@ -89,12 +89,12 @@
 
         </div>
         <?php
-        include("../conection/conex.php");
+        include("conection/conex.php");
         //conexion de base de datos
         $conn = conectar();
         // Obtener datos de la tabla de usuarios
         $sql = "SELECT IdUsuario, Nombre FROM usuarios";
-        $resultado = $conexion->query($sql);
+        $resultado = $conn->query($sql);
 
         // Crear opciones para el select
         $options = '';
@@ -103,7 +103,7 @@
         }
 
         // Cerrar conexión a la base de datos
-        $conexion->close();
+        $conn->close();
         ?>
         <!-- <script>
     function enviarFormulario() {

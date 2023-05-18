@@ -117,7 +117,7 @@ if($num_rows > 0){
        $output['data'] .= '<td>'.$row['Nombre'].'</td>';
        $output['data'] .= '<td>'.$row['Direccion'].'</td>';
        $output['data'] .= '<td>'.$row['Localizacion'].'</td>';
-       $output['data'] .= '<td><a  href="ActualizarCoor.php?id=' . $row['IdCoord'] . '"><i class="bi bi-pencil-square"></i></a></td>';
+       $output['data'] .= '<td><a  href="ActualizarCoord.php?id=' . $row['IdCoord'] . '"><i class="bi bi-pencil-square"></i></a></td>';
        $output['data'] .= '<td><a class="borrar" href="#" onclick="eliminarCoordinacion(' . $row['IdCoord'] . ')"><i class="bi bi-trash3-fill"></i></a></td>';
        //$output['data'] .= '<td><a class="btn btn-warning btn-sm" href="EliminarDepa.php?id=' . $row['IdDeptos'] . '">Eliminar</a></td>';
        $output['data'] .= '</tr>';

@@ -94,7 +94,7 @@ if (!isset($usuario)) {
             <main class="main col" style="width: 80%;">
                 <div class="row justify-content-right align-content-center text-center">
 
-                    <h1>Vales de Entrega</h1>
+                    <h1>Etiquetas</h1>
                     <br>
                     <form class="d-flex" role="search" style="width: 100%;">
                         <div class="flex-grow-2 " style="width: 35%;">
@@ -152,9 +152,6 @@ if (!isset($usuario)) {
                     </div>
                     <div class="col-6" id="nav-paginacion"></div>
                     <div>
-                        <a href="AgregarInventario.php"><button class="btn-add btn-lg">
-                                <i class="fas fa-plus-circle "></i> Agregar
-                            </button></a>
                         <a href="#" onclick="descargarExcel(2);" id="btn-excelEtiqueta">
                             <button class="btn-add btn-lg">
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>

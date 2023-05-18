@@ -1,5 +1,5 @@
 <?php
-include("../conection/conex.php");
+include("conection/conex.php");
 //conexion de base de datos
 $conn = conectar();
 

@@ -87,12 +87,12 @@
         </div>
 
         <?php
-        include("../conection/conex.php");
+        include("conection/conex.php");
         //conexion de base de datos
         $conn = conectar();
         // Obtener datos de la tabla de usuarios
         $sql = "SELECT IdUsuario, Nombre FROM usuarios";
-        $resultado = $conexion->query($sql);
+        $resultado = $conn->query($sql);
 
         // Crear opciones para el select
         $options = '';
@@ -101,7 +101,7 @@
         }
 
         // Cerrar conexión a la base de datos
-        $conexion->close();
+        $conn->close();
         ?>
         <form class="form" id="FormAdd" method="POST" action="Crud/InsertarCoor.php">
           <div class="container">
@@ -183,7 +183,7 @@
         if (result.isConfirmed) {
           // Si el usuario confirma, envía los datos al archivo correspondiente
           const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
-          fetch('Crud/InsertarCoor.php', {
+          fetch('crud/InsertarCoor.php', {
             method: 'POST',
             body: formData
           }).then(response => {
@@ -198,7 +198,7 @@
                 timer: 3000
               });
               setTimeout(function() {
-                window.location.href = 'Coordinaciones.php'; //modificar para que al momento de guardar me direcciones a usuarios
+                window.location.href = 'Coordinacion.php'; //modificar para que al momento de guardar me direcciones a usuarios
               }, 1000);
             } else {
               // Si el servidor devuelve un error, muestra el mensaje de error

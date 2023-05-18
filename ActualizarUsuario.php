@@ -85,7 +85,7 @@
 
         </div>
         <?php
-        include("../conection/conex.php");
+        include("conection/conex.php");
         //conexion de base de datos
         $conn = conectar();
 
@@ -179,7 +179,7 @@
                 timer: 3000
               });
               setTimeout(function() {
-                window.location.href = 'Usuarios.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
+                window.location.href = 'usuarios.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
               }, 1000);
             } else {
               Swal.fire({

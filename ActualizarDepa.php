@@ -1,3 +1,17 @@
+<?php
+//llamamos la sesion
+session_start();
+//pasamos el usuario de la sesion
+$usuario = $_SESSION['usuario'];
+
+//evaluar si existe una session iniciada de lo contrario redirigir a login
+if (!isset($usuario)) {
+    header("location: login.php");
+} else {
+}
+$resultado = true;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +102,7 @@
         </div>
 
         <?php
-        include("../conection/conex.php");
+        include("conection/conex.php");
         //conexion de base de datos
         $conn = conectar();
 

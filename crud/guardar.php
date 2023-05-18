@@ -33,13 +33,12 @@ $Serape = $_POST['Serape'];
 
 
 
-$insertarInven = "INSERT INTO inventariogeneral VALUES ('$No','$COG','$NumInvenCompleto','$TramiteBajas2023','1','1','$Estatus','$NombreBien','$descripcion','$Estado','$Municipio','$Inmuble','$CoordinacionZona','$NombreLugar','$ClaveUbicacion','$NombreUsuario','$NumUsuario','$Costo','$FechaAdqui','$FormaAdqui','$Proveedor','$Factura','$Condiciones','$Observacion','$ObservacionGral','$NumInventarioConsumo','$Serape')";
+$insertarInven = "INSERT INTO inventariogeneral VALUES ('$No','$COG','$NumInvenCompleto','$TramiteBajas2023','$Estatus','$NombreBien','$descripcion','$Estado','$Municipio','$Inmuble','$CoordinacionZona','$NombreLugar','$ClaveUbicacion','$NombreUsuario','$NumUsuario','$Costo','$FechaAdqui','$FormaAdqui','$Proveedor','$Factura','$Condiciones','$Observacion','$ObservacionGral','$NumInventarioConsumo','$Serape')";
 
 echo $insertarInven;
 
 $queryInsert = mysqli_query($conec, $insertarInven);
 
 if ($queryInsert) {
-    echo '<script>alert("guardado correctamente");
-    location.href = "../index.php";</script> ';
+    echo '<script>location.href = "../index.php";</script> ';
 }

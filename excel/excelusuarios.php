@@ -15,9 +15,9 @@ header("Content-Disposition: attachment; filename= Usuarios.xls");
                         </thead>
                         <tbody id="content">
                         <?php
-                         include("Conexion/Conexion.php");
-
-                         $conn = conectar_bd();
+                         include("../conection/conex.php");
+                         //conexion de base de datos
+                         $conn = conectar();
                         // Consultar la tabla "usuarios"
                         $sql = "SELECT * FROM usuarios";
                         $result = $conn->query($sql);

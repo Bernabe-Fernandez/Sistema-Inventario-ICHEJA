@@ -124,7 +124,7 @@ if($num_rows > 0){
        $output['data'] .= '<td>'.$row['Observaciones'].'</td>';
        $output['data'] .= '<td>'.$row['CodigoPostal'].'</td>';
        
-       $output['data'] .= '<td><a  href="ActualizarPlaza.php?id=' . $row['IdPlazas'] . '"><i class="bi bi-pencil-square"></i></a></td>';
+       $output['data'] .= '<td><a  href="ActualizarPlazas.php?id=' . $row['IdPlazas'] . '"><i class="bi bi-pencil-square"></i></a></td>';
        $output['data'] .= '<td><a class="borrar" href="#" onclick="eliminarPlaza(' . $row['IdPlazas'] . ')"><i class="bi bi-trash3-fill"></i></a></td>';
        //$output['data'] .= '<td><a class="btn btn-warning btn-sm" href="EliminarDepa.php?id=' . $row['IdDeptos'] . '">Eliminar</a></td>';
        $output['data'] .= '</tr>';

@@ -1,3 +1,19 @@
+<?php
+//llamamos la sesion
+session_start();
+//pasamos el usuario de la sesion
+$usuario = $_SESSION['usuario'];
+
+//evaluar si existe una session iniciada de lo contrario redirigir a login
+if (!isset($usuario)) {
+    header("location: login.php");
+} else {
+}
+$resultado = true;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +40,7 @@
       <div class="col-4 text-right barra">
         <ul class="navbar-nav mr-auto">
           <li>
-            <a href="index.php" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"></i></a>
+            <a href="index.php" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"><?php echo "<h5>BIENVENIDO $usuario </h5>"; ?></i></a>
 
             <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
               <a class="dropdown-item menuperfil cerrar" href="login.php"><i class="fas fa-sign-out-alt m-1"></i>Salir
@@ -222,9 +238,6 @@
             </div>
             <div class="col-2" id="nav-paginacion"></div>
           </div>
-
-
-
           <script>
             let paginaActual = 1
 
@@ -277,7 +290,7 @@
                 <i class="fas fa-plus-circle"></i> Agregar
               </button></a>
 
-            <a href="crud/excelusuarios.php" title="Boton para agregar un departamento"><button class="btn-add btn-lg">
+            <a href="excel/excelusuarios.php" title="Boton para agregar un departamento"><button class="btn-add btn-lg">
                 <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40px" height="30px">
                     <path fill="#169154" d="M29,6H15.744C14.781,6,14,6.781,14,7.744v7.259h15V6z" />
                     <path fill="#18482a" d="M14,33.054v7.202C14,41.219,14.781,42,15.743,42H29v-8.946H14z" />
