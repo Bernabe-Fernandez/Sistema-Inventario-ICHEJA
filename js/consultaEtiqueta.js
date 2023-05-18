@@ -45,3 +45,17 @@ function getData(pagina) {
     .catch((err) => console.log("Este es el error" + err));
 }
 
+function descargarExcel() {
+  let input = document.getElementById("campo").value;
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  let columnas = []; // Variable para almacenar los valores seleccionados
+  let selectedValues = [];
+  var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  for (var j = 0; j < checkedCheckboxes.length; j++) {
+    selectedValues.push(checkedCheckboxes[j].value);
+  }
+    columnas = selectedValues; // Actualiza la variable columnas con los valores seleccionados
+  let url = "descarga/excelEtiqueta.php?filtro=" + encodeURIComponent(input);
+  document.getElementById("btn-excelEtiqueta").href = url;
+}
+document.getElementById("btn-excelEtiqueta").addEventListener("click", descargarExcel);
