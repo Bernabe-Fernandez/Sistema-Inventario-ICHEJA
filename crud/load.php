@@ -1,8 +1,7 @@
 <?php
 require '../conection/conex.php';
-
+$columnas;
 $conn = conectar();
-
 //datos a consultar
 $columns = ['No', 'COG', 'NumInvenCompleto', 'TramiteBajas2023', 'Estatus' , 'NombreBien', 'Descripcion',  'Estado', 'Municipio',  'Inmueble',  'CoordinacionZona', 'NombreLugar', 'ClaveUbicacion', 'NombreUsuario',  'NumUsuario',  'Costo',  'FechaAdquisicion', 'FormaAdquisicion',  'Proveedor', 'Factura', 'Condiciones', 'Observacion', 'ObservacionGral', 'NumeroInventarioConsumo', 'SERAPE'];
 //table donde se realiza la consulta
@@ -144,5 +143,3 @@ if($output['totalRegistros'] > 0){
 }
 
 echo json_encode($output, JSON_UNESCAPED_UNICODE);
-
-?>
