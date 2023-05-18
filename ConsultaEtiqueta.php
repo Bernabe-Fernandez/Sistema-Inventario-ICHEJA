@@ -155,7 +155,7 @@ if (!isset($usuario)) {
                         <a href="AgregarInventario.php"><button class="btn-add btn-lg">
                                 <i class="fas fa-plus-circle "></i> Agregar
                             </button></a>
-                        <a href="#" onclick="descargarExcel();" id="btn-excelEtiqueta">
+                        <a href="#" onclick="descargarExcel(2);" id="btn-excelEtiqueta">
                             <button class="btn-add btn-lg">
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                                 Excel
