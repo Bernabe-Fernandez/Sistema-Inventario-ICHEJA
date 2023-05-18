@@ -155,12 +155,18 @@ if (!isset($usuario)) {
                         <a href="AgregarInventario.php"><button class="btn-add btn-lg">
                                 <i class="fas fa-plus-circle "></i> Agregar
                             </button></a>
+                        <a href="#" onclick="descargarExcel();" id="btn-excelEtiqueta">
+                            <button class="btn-add btn-lg">
+                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                Excel
+                            </button>
+                        </a>
                     </div>
                 </div>
         </div>
         </main>
 
-        <script src="js/consultaVales.js"></script>
+        <script src="js/consultaEtiqueta.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
