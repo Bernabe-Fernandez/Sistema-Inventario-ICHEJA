@@ -16,11 +16,9 @@ function getData(pagina) {
   let input = document.getElementById("campo").value;
   let num_registros = document.getElementById("num_registros").value;
   let content = document.getElementById("content");
-
   if (pagina != null) {
     paginaActual = pagina;
   }
-
   //la direccion del archivo que hace la consulta
   let url = "crud/load.php";
   //enviar parametros mediante un formdata
@@ -29,7 +27,6 @@ function getData(pagina) {
   formaData.append("campo", input);
   formaData.append("registros", num_registros);
   formaData.append("pagina", paginaActual);
-
   //crear la peticion mediante fetch
   fetch(url, {
     method: "POST",
@@ -47,12 +44,25 @@ function getData(pagina) {
 
 
 
-
-function descargarExcel(){
+function descargarExcel() {
   let input = document.getElementById("campo").value;
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  let columnas = []; // Variable para almacenar los valores seleccionados
+  let selectedValues = [];
+  var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  for (var j = 0; j < checkedCheckboxes.length; j++) {
+    selectedValues.push(checkedCheckboxes[j].value);
+  }
+    columnas = selectedValues; // Actualiza la variable columnas con los valores seleccionados
   let url = "descarga/excel.php?filtro=" + encodeURIComponent(input);
+  if(columnas.length > 0){
+    url += "&data=" + encodeURIComponent(JSON.stringify(columnas));
+  }
   document.getElementById("btn-excel").href = url;
 }
+document.getElementById("btn-excel").addEventListener("click", descargarExcel);
+
+
 
 //funcion que nos sirve para generar alerta de confimracion de eliminación
 function ConfirmarDelete(id) {
@@ -73,3 +83,6 @@ function ConfirmarDelete(id) {
     }
   });
 }
+
+
+
