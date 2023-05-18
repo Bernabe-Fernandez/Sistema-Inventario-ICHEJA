@@ -261,11 +261,9 @@
                         timer: 3000
                       });
 
-                      setTimeout(function() {
                         setTimeout(function() {
-                          window.location.href = 'Plazas.php';
-                        }, 4000);
-                      }, 4000);
+                          window.location.href = 'Departamentos.php';
+                      }, 1000);
                     } else {
                       // Si el usuario cancela, muestra el mensaje de "Operación cancelada" y espera unos segundos antes de redirigir a la página "departamentos.html"
 

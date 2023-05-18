@@ -295,7 +295,7 @@ $resultado = true;
 
 
                         setTimeout(function() {
-                            window.location.href = 'Coordinaciones.php';
+                            window.location.href = 'Coordinacion.php';
                         }, 1000);
 
                     } else {

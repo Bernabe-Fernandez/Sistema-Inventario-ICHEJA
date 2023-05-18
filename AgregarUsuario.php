@@ -222,7 +222,7 @@
 
 
           setTimeout(function() {
-            window.location.href = 'Plazas.php';
+            window.location.href = 'usuarios.php';
           }, 1000);
 
         } else {

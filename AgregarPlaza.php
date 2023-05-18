@@ -141,7 +141,7 @@
     }
 </script> -->
 
-        <form class="form" id="FormAdd" method="POST" action="Crud/InsertarPlaza.php">
+        <form class="form" id="FormAdd" method="POST" action="crud/InsertarPlaza.php">
           <div class="container">
             <div class="row">
               <div class="col-md-6">
@@ -237,7 +237,7 @@
                   if (result.isConfirmed) {
                     // Si el usuario confirma, envía los datos al archivo correspondiente
                     const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
-                    fetch('Crud/InsertarPlaza.php', {
+                    fetch('crud/InsertarPlaza.php', {
                       method: 'POST',
                       body: formData
                     }).then(response => {
@@ -346,7 +346,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- <script src="js/Accionesjs/plazas/btnCancelar.js"></script>  -->
-  <script src="js/Accionesjs/plazas/agregar.js"></script>
+  <!-- <script src="js/Accionesjs/plazas/agregar.js"></script> -->
 
 
 </body>

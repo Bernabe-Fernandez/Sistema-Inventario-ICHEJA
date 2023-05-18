@@ -262,7 +262,7 @@
 
 
           setTimeout(function() {
-            window.location.href = 'Plazas.php';
+            window.location.href = 'Coordinacion.php';
           }, 1000);
 
         } else {
