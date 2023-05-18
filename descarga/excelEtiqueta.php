@@ -5,11 +5,11 @@ $conn = conectar();
 //recibimos el paramatro del filtro desde el get
 $filtro = "";
 $data = "";
-if (isset($_GET['filtro']) && isset($_GET['data'])) {
+if (isset($_GET['filtro']) && isset($_GET['opcion'])) {
     $filtro = $_GET['filtro'];
-    $data = json_decode($_GET['data']);
+    $opcion = $_GET['opcion'];
 }
-$columns = ['NumInvenCompleto','NombreBien', 'Descripcion', 'CoordinacionZona', 'NombreLugar', 'ClaveUbicacion', 'NombreUsuario',  'NumUsuario',  'Costo',  'FechaAdquisicion','Factura', 'NumeroInventarioConsumo'];
+$columns = ['NumInvenCompleto', 'NombreBien', 'Descripcion', 'CoordinacionZona', 'NombreLugar', 'ClaveUbicacion', 'NombreUsuario',  'NumUsuario',  'Costo',  'FechaAdquisicion', 'Factura', 'NumeroInventarioConsumo'];
 $columnas = ['No', 'COG', 'NumInvenCompleto', 'TramiteBajas2023', 'Estatus', 'NombreBien', 'Descripcion',  'Estado', 'Municipio',  'Inmueble',  'CoordinacionZona', 'NombreLugar', 'ClaveUbicacion', 'NombreUsuario',  'NumUsuario',  'Costo',  'FechaAdquisicion', 'FormaAdquisicion',  'Proveedor', 'Factura', 'Condiciones', 'Observacion', 'ObservacionGral', 'NumeroInventarioConsumo', 'SERAPE'];
 
 //tabla de consulta
@@ -38,8 +38,13 @@ FROM $table $where";
 $resultado = mysqli_query($conn, $querySelect);
 $num_rows = $resultado->num_rows;
 
-header("Content-Type: aplication/vnd.ms-excel; charset=iso-8859-1");
-header("content-Disposition: attachment; filename=Etiquetas.xls");
+if ($opcion == 1) {
+    header("Content-Type: aplication/vnd.ms-excel; charset=iso-8859-1");
+    header("content-Disposition: attachment; filename=Vales.xls");
+} else if ($opcion == 2) {
+    header("Content-Type: aplication/vnd.ms-excel; charset=iso-8859-1");
+    header("content-Disposition: attachment; filename=Etiquetas.xls");
+}
 ?>
 <?php
 // ... Código de consulta y obtención de datos ...
