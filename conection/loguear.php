@@ -19,6 +19,7 @@ $querySelect = "SELECT * FROM usuarioadmin where NombreUsuario = '$username' and
 //ejecutar consulta en la base de datos
 $consulta = mysqli_query($conec, $querySelect);
 
+
 //comprobacion para usuarios
 if ($consulta->num_rows) {
     //revisar si el password es correcto
