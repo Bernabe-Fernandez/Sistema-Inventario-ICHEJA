@@ -76,25 +76,43 @@
                         <h1>Registrar usuarios</h1>
                         <br>
                         
-                        
                     </div>
-                        <br>
-                        <br>
-                        <br>
+                      <br>
+                      <br>
+                      <br>
                         
-            </div>    
-            <form class="form" action="Crud/operauser.php" method="post" id="FormAdd">
+            </div>
+            <?php
+             include("../conection/conex.php");
+             //conexion de base de datos
+             $conn = conectar();
+
+            // Obtener el id del registro a consultar
+            $id = $_GET['id'];
+
+            // Consultar los datos del registro en la base de datos
+            $sql = "SELECT No_User, Nombre, Telefono
+            FROM usuarios
+            WHERE IdUsuario = $id";
+            $result = $conn->query($sql);
+
+            // Si se encontraron resultados, mostrar los datos en el formulario
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+            }
+            ?>    
+            <form class="form" id="FormAdd" action="Crud/UpdateUsuario.php?id=<?php echo $id; ?>" method="POST">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="no.usu" class="form-label">Numero de usuario:</label>
-                            <input type="number" id="nousu" name="nousu" class="" required><br><br>
+                            <input type="number" id="No_User" name="No_User" value="<?php echo $row['No_User']; ?>" ><br><br>
             
                             <label for="nom.usuario" class="form-label">Nombre del usuario:</label>
-                            <input type="text" id="nomusuario" name="nomusuario" class=""required><br><br>
+                            <input type="text" id="Nombre" name="Nombre" value="<?php echo $row['Nombre']; ?>" required><br><br>
 
                             <label for="No.dep" class="form-label">Numero de telefono:</label>
-                            <input type="text" id="NumTel" name="NumTel" class="" required><br><br>
+                            <input type="text" id="Telefono" name="Telefono" value="<?php echo $row['Telefono']; ?>" ><br><br>
                             
                         </div>
                                                     <!--botones de accion dentro del formulario  -->
@@ -107,12 +125,12 @@
                             <span style="vertical-align: middle;">Agregar</span>
                           </button>
                         
-                          <button id="cancelBtnUsuario" type="button" class="BotonGuardar" style="vertical-align: middle;"><i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                          
+
+                              <button id="cancelUsuario" type="button" class="BotonGuardar" style="vertical-align: middle;"><i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                         </svg> Cancelar</i></button>
-                  
-                        
-                          
+                         
                         </div>
                         <!--  fin de los botones de acciones -->
                       </div>
@@ -125,81 +143,79 @@
         </div>
     </div>
     
-<script> //inicio de script
+    <script>
   const form = document.querySelector('#FormAdd');
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita que el formulario se envíe automáticamente
-  Swal.fire({
-    title: '¿Estás seguro que deseas agregar esta información?',
-    showCancelButton: true,
-    confirmButtonText: 'Sí, agregar',
-    cancelButtonText: 'No, volver',
-    timerProgressBar: true,
-    allowOutsideClick: false
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // Si el usuario confirma, envía los datos al archivo correspondiente
-      const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
-      fetch('Crud/operauser.php', {
-        method: 'POST',
-        body: formData
-      }).then(response => {
-        // Si el servidor devuelve una respuesta exitosa, muestra el mensaje de éxito
-        if (response.ok) {
-          Swal.fire({
-            icon: 'success',
-            title: '¡Guardado correctamente!',
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-          });
-          setTimeout(function() {
-            window.location.href = 'agregarUsuario.php';//modificar para que al momento de guardar me direcciones a usuarios
-          }, 1000);
-        } else {
-          // Si el servidor devuelve un error, muestra el mensaje de error
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    Swal.fire({
+      title: '¿Estás seguro que deseas actualizar esta información?',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, actualizar',
+      cancelButtonText: 'No, volver',
+      timerProgressBar: true,
+      allowOutsideClick: false
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const plazaId = form.dataset.plazaId; // Obtener el ID de la plaza del atributo de datos del formulario
+        const formData = new FormData(form);
+        
+        formData.set('id', plazaId); // Establecer el ID de la plaza en el FormData
+
+        fetch('Crud/UpdateUsuario.php?id=<?php echo $id; ?>', {
+          method: 'POST',
+          body: formData
+        }).then(response => {
+          if (response.ok) {
+            Swal.fire({
+              icon: 'success',
+              title: '¡Actualizado correctamente!',
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000
+            });
+            setTimeout(function() {
+              window.location.href = 'Usuarios.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
+            }, 1000);
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error al actualizar la información',
+              text: 'Ocurrió un error al actualizar la información. Por favor, inténtalo de nuevo más tarde.',
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000
+            });
+          }
+        }).catch(error => {
           Swal.fire({
             icon: 'error',
-            title: 'Error al guardar la información',
-            text: 'Ocurrió un error al guardar la información. Por favor, inténtalo de nuevo más tarde.',
+            title: 'Error al actualizar la información',
+            text: 'Ocurrió un error al actualizar la información. Por favor, inténtalo de nuevo más tarde.',
             toast: true,
             position: 'top-end',
             showConfirmButton: false,
             timer: 3000
           });
-        }
-      }).catch(error => {
-        // Si ocurre un error en el proceso de envío, muestra el mensaje de error
+        });
+      } else {
         Swal.fire({
-          icon: 'error',
-          title: 'Error al guardar la información',
-          text: 'Ocurrió un error al guardar la información. Por favor, inténtalo de nuevo más tarde.',
+          icon: 'info',
+          title: 'Operación cancelada',
           toast: true,
           position: 'top-end',
           showConfirmButton: false,
-          timer: 1000
+          timer: 3000
         });
-      });
-    } else {
-      // Si el usuario cancela, muestra el mensaje de "Operación cancelada" y no envía los datos
-      Swal.fire({
-        icon: 'info',
-        title: 'Operación cancelada',
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000
-      });
-    }
+      }
+    });
   });
-});
-
-
-</script> 
+</script>
 <script>
-                        cancelBtnUsuario.addEventListener('click', function() {
+                        cancelUsuario.addEventListener('click', function() {
   Swal.fire({
     title: '¿Estás seguro que deseas cancelar la operación?',
     showCancelButton: true,
@@ -219,9 +235,9 @@ form.addEventListener('submit', function(event) {
         timer: 3000
       });
 
-     
+      
         setTimeout(function() {
-          window.location.href = 'Plazas.php';
+          window.location.href = 'Usuarios.php';
         }, 1000);
       
     } else {
@@ -231,8 +247,7 @@ form.addEventListener('submit', function(event) {
   });
 });
 
-                      </script> 
-
+                      </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>

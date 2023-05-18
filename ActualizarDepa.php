@@ -27,7 +27,7 @@
                         <a href="#" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"></i></a>
 
                         <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
-                            <a class="dropdown-item menuperfil cerrar" href="login.php"><i class="fas fa-sign-out-alt m-1"></i>Salir
+                            <a class="dropdown-item menuperfil cerrar" href="login.html"><i class="fas fa-sign-out-alt m-1"></i>Salir
                             </a>
                         </div>
                     </li>
@@ -40,28 +40,28 @@
         <div class="row">
             <div class="barra-lateral col-12 col-sm-auto">
                 <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-                    <a href="index.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <a href="index.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
                         <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
                         <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
                       </svg></i><span>Inicio</span></a>
                       
-                    <a href="Inventario.php"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16">
+                    <a href="Inventario.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16">
                         <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
                       </svg><i class=""></i></i><span>Inventario</span></a>
     
-                    <a href="vales.php"><i> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-text-fill" viewBox="0 0 16 16">
+                    <a href="vales.html"><i> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-text-fill" viewBox="0 0 16 16">
                         <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
                       </svg></i><span>Vales</span></a>
     
-                    <a href="Etiquetas.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+                    <a href="Etiquetas.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
                         <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z"/>
                       </svg></i><span>Etiquetas</span></a>
     
-                    <a href="usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                    <a href="Usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
                       <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
                     </svg></i><span>Usuario</span></a>
                     
-                    <a href="Coordinacion.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
+                    <a href="Coordinaciones.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
                       </svg></i><span>Coordinaciones</span></a>
                     
@@ -83,49 +83,90 @@
                     </div>
 
                         
-            </div>    
-            <form class="form" id="FormAdd">
+            </div>  
+            
+            <?php
+           include("../conection/conex.php");
+           //conexion de base de datos
+           $conn = conectar();
+
+            // Obtener el id del registro a consultar
+            $id = $_GET['id'];
+
+            // Consultar los datos del registro en la base de datos
+            $sql = "SELECT c.*, u.IdUsuario, u.Nombre
+            FROM departamentos c
+            INNER JOIN usuarios u ON c.IdDeptos = u.IdUsuario
+            WHERE c.IdDeptos = $id
+            ";
+            $result = $conn->query($sql);
+
+            // Si se encontraron resultados, mostrar los datos en el formulario
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+            }
+            ?>
+
+<form class="form" id="FormAdd" action="Crud/UpdateDepa.php?id=<?php echo $id; ?>" method="POST">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="N/C" class="form-label">N/C:</label>
-                            <input type="text" id="N_c" name="n_c" ><br><br>
+                            <input type="text" id="n_c" name="n_c" value="<?php echo $row['N_C']; ?>"><br><br>
             
-                            <label for="clave1" class="form-label">clave1:</label>
-                            <input type="number" id="clave1" name="clave1" ><br><br>
+                            <label for="N/C" class="form-label">clave1:</label>
+                            <input type="number" id="Clave1" name="Clave1" value="<?php echo $row['Clave1']; ?>"><br><br>
             
                             <label for="Clave2" class="form-label">Clave2:</label>
-                            <input type="number" id="Clave2" name="Clave2" ><br><br>
+                            <input type="number" id="Clave2" name="Clave2" value="<?php echo $row['Clave2']; ?>"><br><br>
 
                             <label for="Ubicacion">Ubicación:</label>
-                            <textarea id="Ubicacion" name="Ubicación"></textarea><br><br>
+                            <textarea id="Ubicacion" name="Ubicacion"><?php echo $row['Ubicacion']; ?></textarea><br><br>
             
                             <label for="N/C" class="form-label">Numero del inmueble:</label>
-                            <input type="number" id="No.inmueble" name="No.inmueble" ><br><br><br>
+                            <input type="text" id="Inmueble" name="Inmueble" value="<?php echo $row['Inmueble']; ?>"><br><br><br>
             
+                            
                         </div>
                         <div class="col-md-6">
-                            <label for="No.depa" class="form-label">Nombre del departamento:</label>
-                            <input type="number" id="No.depa" name="No.depa" ><br><br>
+                            <label for="No.dep" class="form-label">Nombre del departamento:</label>
+                            <input type="text" id="Nombre_Depto" name="Nombre_Depto" value="<?php echo $row['Nombre_Depto']; ?>"><br><br>
 
                             <label for="Direccion">Dirección:</label>
-                            <textarea id="Direccion" name="Direccion"></textarea><br><br>
+                            <textarea id="Direccion" name="Direccion"><?php echo $row['Direccion']; ?></textarea><br><br>
             
-                            <label for="Localizacion" title="aqui debe de ir la Localizacion">Localización:</label>
-                            <textarea id="Localizacion" name="Localizacion"></textarea><br><br>
+                            <label for="Localizacion">Localización:</label>
+                            <textarea id="Localizacion" name="Localizacion"><?php echo $row['Localizacion']; ?></textarea><br><br>
                             
+                            <!-- Mostrar select con opciones dinámicas -->
                             <div class="input-group-prepend" style="margin-left: 0px;">
-                                <label for="Name_user" class="form-label">Nombre del usuario:</label>
-                                <select class="input-group-append" aria-label="Default select example">
-                                        <option selected>Seleccione un usuario</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                </select>
-                            </div><br>
+                    <label for="NombreDepa" class="form-label">Nombre del usuario:</label>
+                    <select class="input-group-append" name= "usuario_id"aria-label="Default select example" style="width: 60%;">
+                        <option selected disabled>Seleccione una departamento</option>
+                        <?php
+                        // Consultar los usuarios
+                        $sql_usuarios = "SELECT * FROM usuarios";
+                        $result_usuarios = $conn->query($sql_usuarios);
+                        while ($row_usuarios = $result_usuarios->fetch_assoc()) {
+                            // Verificar si el usuario actual es el mismo que el de la coordinación
+                            $selected = '';
+                            if ($row_usuarios['IdUsuario'] == $row['IdUsuario']) {
+                            $selected = 'selected';
+                            }
+                            echo '<option value="'.$row_usuarios['IdUsuario'].'" '.$selected.'>'.$row_usuarios['Nombre'].'</option>';
+                        }
+                        ?>
+                    </select>
+                            <br>
+                            
+
+
+                            <!-- Obtener ID del usuario seleccionado -->
+                           
+                    
                         </div>
                     </div>
-                <div>
+                </div>
             </form> 
                     <br>
                         <div style="text-align: center;">
@@ -133,23 +174,123 @@
 
                                 <button id="AgregarBtn" type="submit" class="BotonGuardar" style="vertical-align: middle;"><i> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                  </svg> Agregar</i></button>
+                                  </svg> Actualizar</i></button>
         
-                                <button id="cancelBtn" type="button" class="BotonGuardar" style="vertical-align: middle;"><i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                <button id="cancelDepa" type="button" class="BotonGuardar" style="vertical-align: middle;"><i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                                 </svg> Cancelar</i></button>
 
-                                <a class="BotonGuardar" href="Departamentos.php" role="button" style="vertical-align: middle;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
-                                    </svg>
-                                <span style="vertical-align: middle;">regresar</span>
-                                </a>
+                                
                             </div>
                             <!--  fin de los botones de acciones -->
                             </div>
         
             </main>
+            <script>
+  const form = document.querySelector('#FormAdd');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    Swal.fire({
+      title: '¿Estás seguro que deseas actualizar esta información?',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, actualizar',
+      cancelButtonText: 'No, volver',
+      timerProgressBar: true,
+      allowOutsideClick: false
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const plazaId = form.dataset.plazaId; // Obtener el ID de la plaza del atributo de datos del formulario
+        const formData = new FormData(form);
+        
+        formData.set('id', plazaId); // Establecer el ID de la plaza en el FormData
+
+        fetch('Crud/UpdateDepa.php?id=<?php echo $id; ?>', {
+          method: 'POST',
+          body: formData
+        }).then(response => {
+          if (response.ok) {
+            Swal.fire({
+              icon: 'success',
+              title: '¡Actualizado correctamente!',
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000
+            });
+            setTimeout(function() {
+              window.location.href = 'Departamentos.php'; // Modificar para redireccionar a la página de usuarios después de actualizar
+            }, 1000);
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error al actualizar la información',
+              text: 'Ocurrió un error al actualizar la información. Por favor, inténtalo de nuevo más tarde.',
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000
+            });
+          }
+        }).catch(error => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error al actualizar la información',
+            text: 'Ocurrió un error al actualizar la información. Por favor, inténtalo de nuevo más tarde.',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+        });
+      } else {
+        Swal.fire({
+          icon: 'info',
+          title: 'Operación cancelada',
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
+        });
+      }
+    });
+  });
+</script>
+<script>
+                        cancelDepa.addEventListener('click', function() {
+  Swal.fire({
+    title: '¿Estás seguro que deseas cancelar la operación?',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, cancelar',
+    cancelButtonText: 'No, volver',
+    timerProgressBar: true,
+    allowOutsideClick: false
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Si el usuario confirma, realiza la acción de cancelar
+      Swal.fire({
+        icon: 'info',
+        title: 'Operación cancelada',
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+
+      
+        setTimeout(function() {
+          window.location.href = 'Departamentos.php';
+        }, 1000);
+      
+    } else {
+      // Si el usuario cancela, muestra el mensaje de "Operación cancelada" y espera unos segundos antes de redirigir a la página "departamentos.html"
+      
+    }
+  });
+});
+
+                      </script>
         </div>
     </div>
     

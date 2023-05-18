@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/0123456789.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
     <title>Inicio</title>
 </head>
 <body>
@@ -56,11 +59,11 @@
                     <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z"/>
                   </svg></i><span>Etiquetas</span></a>
 
-                <a href="usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                <a href="Usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
                 </svg></i><span>Usuario</span></a>
                 
-                <a href="Coordinacion.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
+                <a href="Coordinaciones.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
                   </svg></i><span>Coordinaciones</span></a>
                   
@@ -82,40 +85,119 @@
                     </div>
 
                         
-            </div>    
-            <form class="form" id="FormAdd">
+            </div>
+            <?php
+            include("../conection/conex.php");
+            //conexion de base de datos
+            $conn = conectar();
+            // Obtener datos de la tabla de usuarios
+            $sql = "SELECT IdUsuario, Nombre FROM usuarios";
+            $resultado = $conexion->query($sql);
+
+            // Crear opciones para el select
+            $options = '';
+            while ($fila = $resultado->fetch_assoc()) {
+                $options .= '<option value="'.$fila['IdUsuario'].'">'.$fila['Nombre'].'</option>';
+            }
+
+            // Cerrar conexión a la base de datos
+            $conexion->close();
+            ?>    
+            <!-- <script>
+    function enviarFormulario() {
+        event.preventDefault(); // Prevenir acción por defecto
+
+        // Obtener datos del formulario
+        var formData = $('#form').serialize();
+
+        // Enviar petición AJAX
+        $.ajax({
+            url: 'Crud/InsertarPlaza.php',
+            type: 'POST',
+            data: formData,
+            dataType: 'json', // Especificar tipo de datos de respuesta
+            success: function(response) {
+                // Manejar respuesta del archivo PHP
+                // Si la respuesta contiene un error, mostrar una alerta
+                if (response.error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: response.error,
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    });
+                } else {
+                    // Si no hay error, hacer algo más
+                    // ...
+                }
+            },
+            error: function(xhr, status, error) {
+                // Manejar error de la petición AJAX
+                console.log(error);
+            }
+        });
+    }
+</script> -->
+
+             <form class="form" id="FormAdd" method="POST" action="Crud/InsertarPlaza.php">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <label for="N/C" class="form-label">N/C Plaza:</label>
-                            <input type="text" id="N_c" name="n_c" class="" required><br><br>
+                            <input type="text" id="N_C" name="N_C" class="" required><br><br>
             
-                            <label for="N/C" class="form-label">Coordinación:</label>
-                            <input type="number" id="clave1" name="clave1" class="" required><br><br>
+                            <label for="N/C" class="form-label">Coordinación de Zona:</label>
+                            <input type="TEXT" id="CoordZona" name="CoordZona" class="" required><br><br>
             
-                            <label for="Clave2" class="form-label">No.plaza:</label>
-                            <input type="number" id="Clave2" name="Clave2" class="" required><br><br>
+                            <label for="Clave2" class="form-label">Numero de Plazas:</label>
+                            <input type="number" id="NumPlaza" name="NumPlaza" class="" required><br><br>
 
-                            <label for="Ubicacion">Ubicación:</label>
-                            <textarea id="Ubicacion" name="Ubicación" required></textarea><br><br>
+                            <label for="Ubicacion">Nombre de la Plaza:</label>
+                            <textarea id="NombrePlaza" name="NombrePlaza" required></textarea><br><br>
             
-                            <label for="N/C" class="form-label">status:</label>
-                            <input type="text" id="No.inmueble" name="No.inmueble" class=""><br><br><br>
+                            <label for="N/C" class="form-label">Clave de Ubicacion:</label>
+                            <input type="text" id="Ubicacion" name="Ubicacion" class=""><br><br><br>
             
                             
                         </div>
                         <div class="col-md-6">
-                            <label for="No.dep" class="form-label">Nombre de plaza:</label>
-                            <input type="text" id="No.dep" name="No.dep" class="" required><br><br>
+                            <label for="No.dep" class="form-label">Clave de Ubicacion 2:</label>
+                            <input type="text" id="Ubicacion2" name="Ubicacion2" class="" required><br><br>
 
-                            <label for="Direccion">Dirección:</label>
-                            <textarea id="Direccion" name="Direccion" required></textarea><br><br>
+                            <label for="Direccion">Estatus:</label>
+                            <textarea id="Estatus" name="Direccion" required></textarea><br><br>
             
-                            <label for="No.usu" class="form-label">Nombre del usuario:</label>
-                            <input type="text" id="No.usu" name="No.usu" class="" required><br><br>
+                            <label for="No.usu" class="form-label"> Numero de Ubicacion:</label>
+                            <input type="text" id="NumUbicacion" name="NumUbicacion" class="" required><br><br>
 
-                            <label for="Localizacion">Localización:</label>
-                            <textarea id="Localizacion" name="Localizacion" required></textarea><br><br>
+                            <label for="Localizacion">Localidad:</label>
+                            <textarea id="Localidad" name="Localidad" required></textarea><br><br>
+                            
+                            <label for="Municipio">Municipio:</label>
+                            <input type="text" id="Municipio" name="Municipio" class ="" required><br><br>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="No.dep" class="form-label">Observaciones:</label>
+                            <input type="text" id="Observaciones" name="Observaciones" class="" required><br><br>
+
+            
+                            <label for="No.usu" class="form-label">Codigo Postal:</label>
+                            <input type="text" id="CodigoPostal" name="CodigoPostal" class="" required><br><br>
+
+                         
+                        </div>
+                        <div class="col-md-6">
+                            
+                                <!-- Mostrar select con opciones dinámicas -->
+                                <div class="input-group-prepend" style="margin-left: 0px;">
+                                <label for="NombreDepa" class="form-label">Nombre del usuario:</label>
+                                <select class="input-group-append" aria-label="Default select example" name="usuarios" id="usuarios" style="width: 60%;">
+                                    <option value="">Seleccione un usuario</option>
+                                    <?php echo $options; ?>
+                                </select>
+                            </div>
+                            <!-- Cierre del div de select -->
+
                         </div>
                     </div>
                                                     <!--botones de accion dentro del formulario  -->
@@ -131,16 +213,85 @@
                         </svg> Cancelar</i></button>
                   
 
-                          <a class="BotonGuardar" href="Plazas.php" role="button" style="vertical-align: middle;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
-                              </svg>
-                            <span style="vertical-align: middle;">regresar</span>
-                          </a>
+                          
                         </div>
                         <!--  fin de los botones de acciones -->
-                      </div>  
-                      <script>
+                      </div>
+                        
+                      <script> //inicio de script
+  const form = document.querySelector('#FormAdd');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita que el formulario se envíe automáticamente
+  Swal.fire({
+    title: '¿Estás seguro que deseas agregar esta información?',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, agregar',
+    cancelButtonText: 'No, volver',
+    timerProgressBar: true,
+    allowOutsideClick: false
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Si el usuario confirma, envía los datos al archivo correspondiente
+      const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
+      fetch('Crud/InsertarPlaza.php', {
+        method: 'POST',
+        body: formData
+      }).then(response => {
+        // Si el servidor devuelve una respuesta exitosa, muestra el mensaje de éxito
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: '¡Guardado correctamente!',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+          setTimeout(function() {
+            window.location.href = 'Plazas.php';//modificar para que al momento de guardar me direcciones a usuarios
+          }, 1000);
+        } else {
+          // Si el servidor devuelve un error, muestra el mensaje de error
+          Swal.fire({
+            icon: 'error',
+            title: 'Error al guardar la información',
+            text: 'Ocurrió un error al guardar la información. Por favor, inténtalo de nuevo más tarde.',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+        }
+      }).catch(error => {
+        // Si ocurre un error en el proceso de envío, muestra el mensaje de error
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al guardar la información',
+          text: 'Ocurrió un error al guardar la información. Por favor, inténtalo de nuevo más tarde.',
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
+        });
+      });
+    } else {
+      // Si el usuario cancela, muestra el mensaje de "Operación cancelada" y no envía los datos
+      Swal.fire({
+        icon: 'info',
+        title: 'Operación cancelada',
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+    }
+  });
+});
+
+
+</script>
+<script>
                         cancelBtnPlaza.addEventListener('click', function() {
   Swal.fire({
     title: '¿Estás seguro que deseas cancelar la operación?',
@@ -161,11 +312,11 @@
         timer: 3000
       });
 
-      setTimeout(function() {
+     
         setTimeout(function() {
           window.location.href = 'Plazas.php';
-        }, 4000);
-      }, 4000);
+        }, 1000);
+      
     } else {
       // Si el usuario cancela, muestra el mensaje de "Operación cancelada" y espera unos segundos antes de redirigir a la página "departamentos.html"
       
@@ -173,9 +324,13 @@
   });
 });
 
-                      </script>
+                      </script> 
             </div>
             </form> 
+
+
+          
+
             </main>
         </div>
     </div>
@@ -186,8 +341,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/646c794df3.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- <script src="js/Accionesjs/plazas/btnCancelar.js"></script>  -->
     <script src="js/Accionesjs/plazas/agregar.js"></script> 
+
 	
 </body>
 </html>

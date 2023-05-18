@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="css/StilosEmergen.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://kit.fontawesome.com/0123456789.js" crossorigin="anonymous"></script>
     <title>Inicio</title>
 </head>
@@ -57,11 +57,11 @@
                     <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z"/>
                   </svg></i><span>Etiquetas</span></a>
 
-                <a href="usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                <a href="Usuarios.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
                 </svg></i><span>Usuario</span></a>
                 
-                <a href="Coordinacion.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
+                <a href="Coordinaciones.php"><i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
                   </svg></i><span>Coordinaciones</span></a>
                   
@@ -76,24 +76,34 @@
         </div>
             <main class="main col" >
               <div class="row justify-content-right align-content-center text-center">
-                  <div class="div_principa">
+                  
                       <h1>Coordinaciones</h1>
                       <br>
                       <form class="d-flex" role="search" style="width: 100%;">
                         <div class="flex-grow-2 " style="width: 35%;">
-                          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" 
-                          title="buscador de plazas donde puedes buscar a alguna plaza con solo escribir el texto ">
-                        </div>
-                        <div>
+                          <div class="flex-grow-2 " style="width: 35%;">
 
+                          <input class="form-control" type="search" placeholder="Buscar" id="campo"aria-label="Search" 
+                            title="buscador de coordinaciones donde puedes buscar a alguna coordinacion con solo escribir alguno de sus campos ">
+                          </div>
                         </div>
+                        <!-- <div> -->
+                        <div class="col-auto">
+                            <select name="num_registros" id="num_registros" class="form-select">
+                              <option value="10">10</option>
+                              <option value="25">25</option>
+                              <option value="50">50</option>
+                            </select>
+                          </div>
+
+                        <!-- </div> -->
                         
                         <div class="row" style="margin-left: 2%;">
                           <h5>filtradores:</h5><br>
 
                           <div class="col-md-1 " style=" text-align: justify;">
                             <div class="form-check ">
-                              <input class="form-check-input" type="checkbox" value="" id="checkbox1" style="">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox1">
                               <label class="form-check-label" for="checkbox1">N/C
                               </label>
                             </div>
@@ -154,7 +164,8 @@
                             </div>
                           </div>
                              <!-- inicio del boton spam -->
-                          <div class="col-md-6" style="margin-top: -30%; ">
+                             <div class="col-md-6" style="margin-top: -20%; ">
+                          
                             <div class="boton-modal">
                               <label for="btn-modal">
                                 <i class="bi bi-info-circle-fill"></i>
@@ -180,57 +191,136 @@
                       </form>
                       
                       <br><br>
-                       
-                      <table class="table">
+                      <script>
+                        $(document).ready(function() {
+                          $('#checkbox1').change(function() {
+                            $('#nc').toggle();
+                          });
+                          $('#checkbox2').change(function() {
+                            $('#C1').toggle();
+                          });
+                          $('#checkbox3').change(function() {
+                            $('#C2').toggle();
+                          });
+                          $('#checkbox4').change(function() {
+                            $('#ubi').toggle();
+                          });
+                          $('#checkbox5').change(function() {
+                            $('#NumIn').toggle();
+                          });
+                          $('#checkbox6').change(function() {
+                            $('#nomDep').toggle();
+                          });
+                          $('#checkbox7').change(function() {
+                            $('#Direc').toggle();
+                          });
+                          $('#checkbox8').change(function() {
+                            $('#Local').toggle();
+                          });
+                          $('#checkbox9').change(function() {
+                            $('#nomUser').toggle();
+                          });
+
+                          $('input[type="checkbox"]').change(function() {
+                            var checked = $('input[type="checkbox"]:checked');
+                            if (checked.length > 0) {
+                              $('#results th').show();
+                              checked.each(function() {
+                                var col = $(this).attr('id').replace('checkbox', '');
+                                $('#results th:nth-child(' + col + ')').hide();
+                                $('#results td:nth-child(' + col + ')').hide();
+                              });
+                            } else {
+                              $('#results th, #results td').show();
+                            }
+                          }).trigger('change');
+                        });
+                        </script>
+                       <div class="div_principal" style=" overflow: auto;position: sticky;max-height: 500px; width: 96%;" >
+                      <table class="table" class="table" id="results">
                           <thead >
                             <tr>
                               <th scope="col">N/C</th>
-                              <th scope="col">Clave1</th>
-                              <th scope="col">Clav2</th>
-                              <th scope="col">Ubicación</th>
+                              <th scope="col">Clave</th>
+                              <th scope="col">Clave</th>
+                              <th scope="col">Ubicacion</th>
                               <th scope="col">Inmueble</th>
-                              <th scope="col">Nombre coordinación</th>
+                              <th scope="col">Coordinación</th>
+                              <th scope="col">Usuario</th>
                               <th scope="col">Direccion</th>
-                              <th scope="col">Localización</th>
-                              <th scope="col">Nombre usuario</th>
-                              <th scope="col">Acciones</th>
+                              <th scope="col">Localizacion</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td colspan="2">Larry the Bird</td>
-                              <td>@twitter</td>
-                              <td>@twitter</td>
-                              <td>@twitter</td>
-                              <td>@twitter</td>
-                              <td>@twitter</td>
-                              <td>lorem</td>
-                              <td><a href="ActualizarCoord.php"><i class="bi bi-pencil-square"></i></a>
-                                <button class="borrar" id="eliminarBtn" type="button"><i class="bi bi-trash3-fill"></i></button>
-                              </tr>
+                          <tbody id="content">
+
                           </tbody>
                         </table> 
+                        <div class="row">
+                            <div class="col">
+                              <label id="lbl-total">total registros</label>
+                            </div>
+                            <div class="col-2" id="nav-paginacion"></div>
+                          </div>
+                          <script>
+
+                            let paginaActual = 1
+                            
+                            getData(paginaActual);
+
+                            document.getElementById("campo").addEventListener("keyup", function(){
+                              getData(1)
+                            }, false)
+                            document.getElementById("num_registros").addEventListener("change", function(){
+                              getData(paginaActual)
+                            }, false)
+                        function getData(pagina){
+                            let input = document.getElementById("campo").value;
+                            let num_registros = document.getElementById("num_registros").value;
+                            let content = document.getElementById("content");
+                            //la direccion del archivo que hace la consulta
+
+                          if(pagina != null){
+                            paginaActual = pagina
+                          }
+
+                            let url = "Crud/loadcoor.php";// cambio para que funcione en carpetas
+                            //enviar parametros mediante un formdata
+                            let formaData = new FormData();
+
+                            //envio de parametros
+                            formaData.append('campo', input);
+                            formaData.append('registros', num_registros);
+                            formaData.append('pagina', paginaActual);
+
+                            //crear la peticion mediante fetch
+                            fetch(url,{
+                                method: "POST",
+                                body: formaData
+                            }).then(response => response.json())
+                            .then(data => {
+                                content.innerHTML = data.data;
+            
+                                document.getElementById("lbl-total").innerHTML = 'Mostrando ' + data.totalFiltro +
+                        ' de ' + data.totalRegistros + ' registros'
+                        document.getElementById("nav-paginacion").innerHTML = data.paginacion
+                            }).catch(err => console.log(err));
+                        }
+                        console.log(content);
+                        </script>
+                        </div> 
                               <!-- Botón de agregar -->
                               <div>
                                       <a href="AgregarCoor.php"  title="Boton para agregar un departamento"><button class="btn-add btn-lg">
                                         <i class="fas fa-plus-circle "></i> Agregar
                                       </button></a>
+
+                                      <a href="excel/excelcoor.php"  title="Boton para agregar un departamento"><button class="btn-add btn-lg">
+                                        <i><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="30px"><path fill="#169154" d="M29,6H15.744C14.781,6,14,6.781,14,7.744v7.259h15V6z"/><path fill="#18482a" d="M14,33.054v7.202C14,41.219,14.781,42,15.743,42H29v-8.946H14z"/><path fill="#0c8045" d="M14 15.003H29V24.005000000000003H14z"/><path fill="#17472a" d="M14 24.005H29V33.055H14z"/><g><path fill="#29c27f" d="M42.256,6H29v9.003h15V7.744C44,6.781,43.219,6,42.256,6z"/><path fill="#27663f" d="M29,33.054V42h13.257C43.219,42,44,41.219,44,40.257v-7.202H29z"/><path fill="#19ac65" d="M29 15.003H44V24.005000000000003H29z"/><path fill="#129652" d="M29 24.005H44V33.055H29z"/></g><path fill="#0c7238" d="M22.319,34H5.681C4.753,34,4,33.247,4,32.319V15.681C4,14.753,4.753,14,5.681,14h16.638 C23.247,14,24,14.753,24,15.681v16.638C24,33.247,23.247,34,22.319,34z"/><path fill="#fff" d="M9.807 19L12.193 19 14.129 22.754 16.175 19 18.404 19 15.333 24 18.474 29 16.123 29 14.013 25.07 11.912 29 9.526 29 12.719 23.982z"/
+                                        ></svg></i> Descargar
+                                      </button></a>
                                       
                                   </div>
-              </div>                
+                             
           </main>
         </div>
     </div>
@@ -243,6 +333,7 @@
     <script src="/js//Accionesjs/btnCancelar.js"></script> 
     <script src="/js/Accionesjs/agregar.js"></script> 
     <script src="/js/Accionesjs/btnEliminar.js"></script>
+    <script src="js/Accionesjs/Coordinacion/btnEliminarCoor.js"></script>
 	
 </body>
 </html>
