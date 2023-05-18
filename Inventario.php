@@ -96,12 +96,9 @@ $resultado = true;
       <!-- inicio de la informacion que dentro  -->
       <main class="main col" style="width: 80%;">
         <div class="row justify-content-right align-content-center text-center">
-
           <h1>Inventario</h1>
-          <br>
           <form class="d-flex" role="search" style="width: 100%;">
-            <div class="flex-grow-2 " style="width: 35%;">
-
+            <div class="flex-grow-2" style="width: 35%;">
               <input class="form-control" type="search" placeholder="Buscar" id="campo" aria-label="Search" title="buscador de plazas donde puedes buscar a alguna plaza con solo escribir el texto ">
             </div>
             <div class="col-auto">
@@ -111,170 +108,268 @@ $resultado = true;
                 <option value="50">50</option>
               </select>
             </div>
-            <div class="col-auto">
-              <!-- <label for="num_registros" class="form-select">registros </label> -->
-            </div>
-
             <div class="row" style="margin-left: 4%;">
-              <h5>filtradores:</h5><br>
-              <div class="col-md-1 " style=" text-align: justify;">
+              <h5>Filtros:</h5><br>
+              <div class="col-md-2" style=" text-align: justify; margin: 10px, 20px;">
                 <div class="form-check ">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox1">
-                  <label class="form-check-label" for="checkbox1">N/C
+                  <input class="form-check-input" type="checkbox" value="No" id="No" name="No">
+                  <label class="form-check-label" for="No">No
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                  <label class="form-check-label" for="checkbox2">
-                    Clave coordinación
+                  <input class="form-check-input" type="checkbox" value="COG" id="COG" name="columnas[]">
+                  <label class="form-check-label" for="COG">
+                    COG
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox3">
-                  <label class="form-check-label" for="checkbox3">
-                    Clave SEG
+                  <input class="form-check-input" type="checkbox" value="NumInvenCompleto" id="NumInvenCompleto" name="columnas[]">
+                  <label class="form-check-label" for="NumInvenCompleto">
+                    Numero Inventario
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="TramiteBajas2023" id="	TramiteBajas2023" name="columnas[]">
+                  <label class="form-check-label" for="TramiteBajas2023">
+                    Tramite Bajas 2023
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Estatus" id="Estatus" name="columnas[]">
+                  <label class="form-check-label" for="Estatus">
+                    Estatus
                   </label>
                 </div>
               </div>
-              <div class="col-md-1" style="margin-left:20%; padding-left: 25%; text-align: justify; width: 100%;">
-
-                <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                  <label class="form-check-label" for="checkbox4">
-                    Estado
+              <div class="col-md-2" style=" text-align: justify; margin: 10px, 20px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="NombreBien" id="NombreBien" name="columnas[]">
+                  <label class="form-check-label" for="NombreBien">
+                    Nombre Bien
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px; ">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                  <label class="form-check-label" for="checkbox5">
+                  <input class="form-check-input" type="checkbox" value="Descripcion" id="Descripcion" name="columnas[]">
+                  <label class="form-check-label" for="Descripcion">
+                    Descripcion
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Estado" id="Estado" name="columnas[]">
+                  <label class="form-check-label" for="Estado">
+                    Estado
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Municipio" id="Municipio" name="columnas[]">
+                  <label class="form-check-label" for="Municipio">
                     Municipio
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox6">
-                  <label class="form-check-label" for="checkbox6">
-                    Nombre
+                  <input class="form-check-input" type="checkbox" value="Inmueble" id="Inmueble" name="columnas[]">
+                  <label class="form-check-label" for="Inmueble">
+                    Inmueble
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="CoordinacionZona" id="CoordinacionZona" name="columnas[]">
+                  <label class="form-check-label" for="CoordinacionZona">
+                    Coordinacion de Zona
                   </label>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-1" style="margin-top: 16%;">
+              <div class="col-md-2" style="text-align: justify; margin: 10px, 20px;">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                  <label class="form-check-label" for="checkbox4">
-                    Dirección
+                  <input class="form-check-input" type="checkbox" value="NombreLugar" id="NombreLugar" name="columnas[]">
+                  <label class="form-check-label" for="NombreLugar">
+                    Nombre Del Lugar
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                  <label class="form-check-label" for="checkbox5">
-                    Dirección fisica
+                  <input class="form-check-input" type="checkbox" value="ClaveUbicacion" id="ClaveUbicacion" name="columnas[]">
+                  <label class="form-check-label" for="ClaveUbicacion">
+                    Clave de Ubicacion
                   </label>
                 </div>
                 <div class="form-check" style="padding-top: 10px;">
-                  <input class="form-check-input" type="checkbox" value="" id="checkbox6">
-                  <label class="form-check-label" for="checkbox6">
-                    Dirección usuario
+                  <input class="form-check-input" type="checkbox" value="NombreUsuario" id="NombreUsuario">
+                  <label class="form-check-label" for="NombreUsuario">
+                    Nombre Usuario
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="NumUsuario" id="NumUsuario">
+                  <label class="form-check-label" for="NumUsuario">
+                    Clave Usuario
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Costo" id="Costo">
+                  <label class="form-check-label" for="Costo">
+                    Costo
                   </label>
                 </div>
               </div>
-              <!-- inicio del boton spam -->
-              <div class="col-md-6" style="margin-top: -30%; ">
-                <div class="boton-modal">
-                  <label for="btn-modal">
-                    <i class="bi bi-info-circle-fill"></i>
+              <div class="col-md-2" style="text-align: justify; margin: 15px, 20px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="FechaAdquisicion" id="FechaAdquisicion" name="columnas[]">
+                  <label class="form-check-label" for="FechaAdquisicion">
+                    Fecha Adquisicion
                   </label>
                 </div>
-                <!--Fin de Boton-->
-                <!--Ventana Modal-->
-                <input type="checkbox" id="btn-modal">
-                <div class="container-modal">
-                  <div class="content-modal">
-                    <h2>¡Bienvenido!</h2>
-                    <p>Lorem, ipsum dolor</p>
-                    <div class="btn-cerrar">
-                      <label for="btn-modal">Cerrar</label>
-                    </div>
-                  </div>
-                  <label for="btn-modal" class="cerrar-modal"></label>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="FormaAdquisicion" id="	FormaAdquisicion" name="columnas[]">
+                  <label class="form-check-label" for="FormaAdquisicion">
+                    Forma de Adquisicion
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Proveedor" id="Proveedor">
+                  <label class="form-check-label" for="Proveedor">
+                    Proveedor
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Factura" id="Factura">
+                  <label class="form-check-label" for="Factura">
+                    Factura
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="Condiciones" id="Condiciones">
+                  <label class="form-check-label" for="Condiciones">
+                    Condiciones
+                  </label>
                 </div>
               </div>
-              <!-- fin del boton spam -->
+              <div class="col-md-2" style="text-align: justify; margin: 15px, 20px;">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Observacion" id="Observacion" name="columnas[]">
+                  <label class="form-check-label" for="Observacion">
+                    Observacion
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="ObservacionGral" id="ObservacionGral" name="columnas[]">
+                  <label class="form-check-label" for="ObservacionGral">
+                    Observacion Gral
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="NumeroInventarioConsumo" id="NumeroInventarioConsumo">
+                  <label class="form-check-label" for="NumeroInventarioConsumo">
+                    Numero Inventario Consumo
+                  </label>
+                </div>
+                <div class="form-check" style="padding-top: 10px;">
+                  <input class="form-check-input" type="checkbox" value="SERAPE" id="	SERAPE">
+                  <label class="form-check-label" for="	SERAPE">
+                    SERAPE
+                  </label>
+                </div>
+              </div>
             </div>
-          </form>
-          <div class="row g-4">
-            <div>
-              <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
-            </div>
-          </div>
-          <div class="div_principa">
-            <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
-              <thead>
-                <th scope="col">No</th>
-                <th scope="col">COG</th>
-                <th scope="col">Numero Inventario</th>
-                <th scope="col">Tramite Bajas </th>
-                <th scope="col">Estatus</th>
-                <th scope="col">Nombre Bien</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Municipio</th>
-                <th scope="col">Inmueble</th>
-                <th scope="col">Coordinacion de Zona a la que Pertenece</th>
-                <th scope="col">Nombre del Lugar</th>
-                <th scope="col">Clave de Ubicación</th>
-                <th scope="col">Nombre Usuario</th>
-                <th scope="col">Clave Usuario</th>
-                <th scope="col">Costo</th>
-                <th scope="col">Fecha de Adquisición</th>
-                <th scope="col">Forma Adquisición</th>
-                <th scope="col">Proveedor</th>
-                <th scope="col">Factura</th>
-                <th scope="col">Condiciones</th>
-                <th scope="col">Observacion</th>
-                <th scope="col">ObservacionGral</th>
-                <th scope="col">NumeroInventarioConsumo</th>
-                <th scope="col">SERAPE</th>
-              </thead>
-              <tbody id="content">
-
-              </tbody>
-            </table>
-
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <label id="lbl-total"></label>
-            </div>
-          </div>
-          <div class="col-6" id="nav-paginacion"></div>
+        </div>
+        </form>
+        <div class="row g-4">
           <div>
-            <a href="AgregarInventario.php">
-              <button class="btn-add btn-lg">
-                <i class="fas fa-plus-circle "></i>
-                Agregar
-              </button>
-            </a>
-            <a href="descarga/excel.php" onclick="descargarExcel();" id="btn-excel">
-              <button class="btn-add btn-lg">
-                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                Excel
-              </button>
-            </a>
+            <label for="num_registros" class="col-form-label" id="num_registros">Registros: </label>
           </div>
         </div>
-      </main>
+        <div class="div_principa">
+          <table id="results" style="border: 3px solid black;text-align: justify;" class="table table-bordered">
+            <thead>
+              <th scope="col" id="ColumnNo">No</th>
+              <th scope="col" id="ColumnCOG">COG</th>
+              <th scope="col" id="ColumnNumInvenCompleto">Numero Inventario</th>
+              <th scope="col" id="ColumnTramiteBajas2023">Tramite Bajas</th>
+              <th scope="col" id="ColumnEstatus">Estatus</th>
+              <th scope="col" id="ColumnNombreBien">Nombre Bien</th>
+              <th scope="col" id="ColumnDescripcion">Descripcion</th>
+              <th scope="col" id="ColumnEstado">Estado</th>
+              <th scope="col" id="ColumnMunicipio">Municipio</th>
+              <th scope="col" id="ColumnInmueble">Inmueble</th>
+              <th scope="col" id="ColumnCoordinacionZona">Coordinacion de Zona a la que Pertenece</th>
+              <th scope="col" id="ColumnNombreLugar">Nombre del Lugar</th>
+              <th scope="col" id="ColumnClaveUbicacion">Clave de Ubicación</th>
+              <th scope="col" id="ColumnNombreUsuario">Nombre Usuario</th>
+              <th scope="col" id="ColumnNumUsuario">Clave Usuario</th>
+              <th scope="col" id="ColumnCosto">Costo</th>
+              <th scope="col" id="ColumnFechaAdquisicion">Fecha de Adquisición</th>
+              <th scope="col" id="ColumnFormaAdquisicion">Forma Adquisición</th>
+              <th scope="col" id="ColumnProveedor">Proveedor</th>
+              <th scope="col" id="ColumnFactura">Factura</th>
+              <th scope="col" id="ColumnCondiciones">Condiciones</th>
+              <th scope="col" id="ColumnObservacion">Observacion</th>
+              <th scope="col" id="ColumnObservacionGral">ObservacionGral</th>
+              <th scope="col" id="ColumnNumeroInventarioConsumo">NumeroInventarioConsumo</th>
+              <th scope="col" id="ColumnSERAPE">SERAPE</th>
+            </thead>
+            <tbody id="content">
 
-      <script src="js/load.js">
-      </script>
-      <script>
-      </script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-      <script src="https://kit.fontawesome.com/646c794df3.js"></script>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <label id="lbl-total"></label>
+          </div>
+        </div>
+        <div class="col-6" id="nav-paginacion"></div>
+        <div>
+          <a href="AgregarInventario.php">
+            <button class="btn-add btn-lg">
+              <i class="fas fa-plus-circle "></i>
+              Agregar
+            </button>
+          </a>
+          <a href="#" onclick="descargarExcel();" id="btn-excel">
+            <button class="btn-add btn-lg">
+              <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+              Excel
+            </button>
+          </a>
+        </div>
+    </div>
+    </main>
+
+    <script src="js/load.js">
+    </script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var table = document.getElementById('results');
+
+        checkboxes.forEach(function(checkbox) {
+          checkbox.addEventListener('change', function() {
+            var colId = this.value;
+            var column = document.getElementById('Column' + colId);
+            var colIndex = column.cellIndex;
+
+            var rows = table.getElementsByTagName('tr');
+            for (var i = 0; i < rows.length; i++) {
+              var cells = rows[i].getElementsByTagName('td');
+              if (cells.length > colIndex) {
+                cells[colIndex].style.display = this.checked ? 'none' : '';
+              }
+            }
+
+            // Mostrar u ocultar el título de la columna
+            var headerRow = table.getElementsByTagName('thead')[0].getElementsByTagName('tr')[0];
+            var headerCell = headerRow.getElementsByTagName('th')[colIndex];
+            headerCell.style.display = this.checked ? 'none' : '';
+          });
+        });
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/646c794df3.js"></script>
 </body>
 
 </html>
